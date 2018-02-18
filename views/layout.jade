@@ -131,7 +131,7 @@ html
         .col-md-3.col-md-offset-1
           .coinmarketcap-currency-widget(data-currency='bitcoin-gold', data-base='USD', data-secondary='BTC', data-ticker='true', data-rank='false', data-marketcap='false', data-volume='false', data-stats='USD', data-statsticker='false')
         .col-md-2
-          .panel.panel-default.hidden-sm.hidden-xs
+          .panel.panel-default
             .panel-heading
               if settings.nethash_units == 'K'
                 strong #{settings.locale.network} (KH/s)
@@ -153,7 +153,7 @@ html
               else  
                label#hashrate - 
         .col-md-2
-          .panel.panel-default.hidden-sm.hidden-xs
+          .panel.panel-default
             .panel-heading
               strong #{settings.locale.difficulty}
             .panel-body
@@ -164,7 +164,7 @@ html
               else
                label#difficulty -
         .col-md-2
-          .panel.panel-default.hidden-sm.hidden-xs
+          .panel.panel-default
             .panel-heading
               strong #{settings.locale.ex_supply} (#{settings.symbol})
             .panel-body
