@@ -5,6 +5,7 @@ var db = require('../lib/database');
 var app = require('../app');
 
 app.set('port', process.env.PORT || settings.port);
+console.log('trying to start on port %s', app.get('port'));
 
 var dbString = 'mongodb://' + settings.dbsettings.user;
 dbString = dbString + ':' + settings.dbsettings.password;
@@ -12,7 +13,9 @@ dbString = dbString + '@' + settings.dbsettings.address;
 dbString = dbString + ':' + settings.dbsettings.port;
 dbString = dbString + '/' + settings.dbsettings.database;
 
+console.log('connecting to %s', dbString);
 db.connect(dbString, function() {
+  console.log('connected');
   db.check_stats(settings.coin, function(exists) {
     if (exists == false) {
       console.log('no stats entry found, creating now..');
@@ -25,6 +28,7 @@ db.connect(dbString, function() {
       });
     }
   });
+  console.log('check_stats completed');
   // check markets
   var markets = settings.markets.enabled;
   for (var i = 0; i < markets.length; i++) {
@@ -37,6 +41,7 @@ db.connect(dbString, function() {
     });  
   } 
   
+  console.log('markets completed');
   db.check_richlist(settings.coin, function(exists){
     if (exists == false) {
       console.log('no richlist entry found, creating now..');
@@ -45,6 +50,8 @@ db.connect(dbString, function() {
       });
     }
   });  
+  console.log('check_richlist completed');
+
   if ( settings.heavy == true ) {
     db.check_heavy(settings.coin, function(exists){
       if (exists == false) {
@@ -54,9 +61,13 @@ db.connect(dbString, function() {
         });
       }
     }); 
+    console.log('check_heavy completed');
   }
 
+  console.log('starting...');
   var server = app.listen(app.get('port'), function() {
     debug('Express server listening on port ' + server.address().port);
+    console.log('listening...');
   });
 });
+console.log('end');
