@@ -5,15 +5,15 @@
 */
 {
   // name your instance!
-  "title": "Iquidus - BTG Explorer",
+  "title": "AchieveCoin Explorer",
 
-  "address": "example.com",
+  "address": "blocks.achievecoin.org",
 
   // coin name
-  "coin": "Bitcoin Gold",
+  "coin": "AchieveCoin",
 
   // coin symbol
-  "symbol": "BTG",
+  "symbol": "ACH",
 
   // logo
   "logo": "/images/bgold.jpg",
@@ -33,9 +33,9 @@
 
   // database settings (MongoDB)
   "dbsettings": {
-    "user": "CHANGEME",
-    "password": "CHANGEME",
-    "database": "btg-explorerdb",
+    "user": "iquidus",
+    "password": "3xp!0reR",
+    "database": "explorerdb",
     "address": "localhost",
     "port": 27017
   },
@@ -47,13 +47,13 @@
   // wallet settings
   "wallet": {
     "host": "localhost",
-    "port": 8332,
+    "port": 7332,
     "user": "CHANGEME",
     "pass": "CHANGEME"
   },
 
   // confirmations
-  "confirmations": 40,
+  "confirmations": 0,
 
   // language settings
   "locale": "locale/en.json",
@@ -90,10 +90,10 @@
   //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
   //default market is loaded by default and determines last price in header
   "markets": {
-    "coin": "BTG",
+    "coin": "ACH",
     "exchange": "USD",
     "enabled": ["yobit"],
-    "cryptopia_id": "1658",
+    "cryptopia_id": "",
     "ccex_key" : "Get-Your-Own-Key",
     "default": "yobit"
   },
@@ -115,9 +115,9 @@
   },
 
   // twitter, facebook, googleplus
-  "twitter": "bitcoingold",
-  "facebook": "btcgpu",
-  "googleplus": "yourgooglepluspage",
+  "twitter": "",
+  "facebook": "",
+  "googleplus": "",
 
   //genesis
   "genesis_tx": "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b",
