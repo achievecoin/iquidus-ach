@@ -1,11 +1,11 @@
-Iquidus Explorer- BTG edition - 1.6.1
+Iquidus Explorer- ACH edition - 1.6.1
 ================
 
 An open source block explorer written in node.js.
 
 ### See it in action
 
-*  [Bitcoin Gold](http://btgblocks.com)
+*  [AchieveCoin Explorer](http://blocks.achievecoin.org)
 
 
 ### Requires
@@ -34,7 +34,7 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/vattay/iquidus-btg explorer
+    git clone https://github.com/achievecoin/iquidus-ach.git explorer
 
 ### Install node modules
 
