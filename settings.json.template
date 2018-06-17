@@ -120,8 +120,8 @@
   "googleplus": "",
 
   //genesis
-  "genesis_tx": "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b",
-  "genesis_block": "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
+  "genesis_tx": "91ced1a84f4aa30ae7b64f1b3a99dfe72c1ba1838bbe596e04e95d1e9d9d7a4a",
+  "genesis_block": "00000000af1da9e603a7442c5a0fa1c1885ee583990234b467894404b20a6119",
 
   //heavy (enable/disable additional heavy features)
   "heavy": false,
